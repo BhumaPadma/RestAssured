@@ -1,0 +1,9 @@
+{
+    "name": "Padma",
+    "location": "Paris",
+    "phone": "7894578",
+    "courses": [
+      "Selenium",
+      "RestAPI"
+    ]
+  }
