@@ -45,7 +45,7 @@ public class ParsingJsonArray_EmployeeAPI {
 				status = true;
 				break;
 			}
-			assertThat(true, is(true));
+			assertThat(status, is(true));
 
 		}
 
