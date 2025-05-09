@@ -41,13 +41,13 @@ public class ParsingJsonArray_EmployeeAPI {
 		boolean status = false;
 		for (int i = 0; i < employeeCount; i++) {
 			String firstName = jsonpath.getString("[" + i + "].first_name");
-			if (firstName.equals("steve")) {
+			if (firstName.equals("Steve")) {
 				status = true;
 				break;
 			}
-			assertThat(status, is(true));
-
+			
 		}
+		assertThat(status, is(true));
 
 	}
 

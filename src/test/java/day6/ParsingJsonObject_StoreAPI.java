@@ -47,9 +47,8 @@ public class ParsingJsonObject_StoreAPI {
 				status = true;
 				break;
 			}
-			assertThat(true, is(true));
-
 		}
+		assertThat(status, is(true));
 
 	}
 

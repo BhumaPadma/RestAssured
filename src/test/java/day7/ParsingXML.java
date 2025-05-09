@@ -1,6 +1,7 @@
 package day7;
 
 import static io.restassured.RestAssured.*;
+
 import static org.hamcrest.Matchers.*;
 
 import java.util.List;
@@ -23,7 +24,7 @@ public class ParsingXML {
      * - Specific XML element values
      */
 
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	void testXmlResponse1() {
 
 		given()
@@ -32,7 +33,10 @@ public class ParsingXML {
 			.get("https://mocktarget.apigee.net/xml")
 		.then()
 			.statusCode(200)
-			.body("city", equalTo("San Jose"))
+			.body("root.city", equalTo("San Jose"))
+			.body("root.firstName", equalTo("John"))
+			.body("root.lastName", equalTo("Doe"))
+			.body("root.state", equalTo("CA"))
 			.contentType("application/xml")
 			.log().body();
 
